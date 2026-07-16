@@ -11,16 +11,15 @@ num_classes = 10
 device = "cuda" if torch.cuda.is_available() else "cpu"
 lr = 0.001
 epochs = 10
-train_split = 0.7
-valid_split = 0.2
+train_split = 0.9
+
 
 #input lidar data
 dataset = None
 
 train_size = len(dataset) * train_split
-valid_size = len(dataset) * valid_split
-test_size = len(dataset) - train_size - valid_size
-dataset_train, datasest_valid, dataset_test = random_split(dataset, [train_size, valid_size, test_size])
+test_size = len(dataset) - train_size 
+dataset_train, dataset_test = random_split(dataset, [train_size, test_size])
 
 
 
