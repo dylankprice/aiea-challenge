@@ -1,2 +1,2 @@
 # aiea-challenge
-Contains code used for aiea challenge team.
+temporary holding for aiea deliverables
